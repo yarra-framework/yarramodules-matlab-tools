@@ -1,4 +1,7 @@
 function [ recon_params ] = yarra_read_mode_section(mode_path, section)
+%% Reads a single section from an ini file, doing simple data conversions
+%  Strings can be converted to numbers successfully with str2num are
+%  converted
 section_values = inifile(mode_path,'readall');
 recon_params = struct;
 for i=1:size(section_values)-1
